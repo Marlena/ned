@@ -40,7 +40,7 @@ var Layout = React.createClass({
   statics: {
     init(Entry) {
       if (typeof document === 'undefined') return;
-      var {config, data} = PUI;
+      var {config, data} = ned;
       React.render(<Entry {...{config, data}}/>, root);
     }
   },

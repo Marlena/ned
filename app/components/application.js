@@ -2,6 +2,7 @@ require('babel/polyfill');
 //var Cursor = require('pui-cursor');
 var Layout = require('../../server/components/layout');
 var React = require('react/addons');
+var Hello = require ('./hello');
 
 var types = React.PropTypes;
 
@@ -12,7 +13,8 @@ var Application = React.createClass({
   },
 
   render() {
-    return (<div>hello world</div>);
+    return (<div><Hello/></div>);
+
   }
 });
 
