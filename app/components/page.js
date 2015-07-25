@@ -3,7 +3,7 @@ var React = require('react/addons');
 var Page = React.createClass({
 
   render(){
-    return (<div></div>);
+    return (<div className="blah"></div>);
   }
 
 

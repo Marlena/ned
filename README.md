@@ -1,0 +1,1 @@
+Copyright 2015 Ned -- Not an Editor
