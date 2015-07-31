@@ -1,5 +1,5 @@
 require('babel/polyfill');
-//var Cursor = require('pui-cursor');
+var Cursor = require('pui-cursor');
 var Layout = require('../../server/components/layout');
 var Page = require('./page');
 var React = require('react/addons');
@@ -12,8 +12,13 @@ var Application = React.createClass({
     data: types.object.isRequired
   },
 
+  getInitialState(){
+    return {page: 'record'}
+  },
+
   render() {
-    return (<div><Page/></div>);
+    var $application = new Cursor(this.state, state => this.setState(state));
+    return (<div><Page {...{$application}}/></div>);
   }
 });
 

@@ -5,8 +5,13 @@ describe('page', function(){
   var Page;
 
   beforeEach(function(){
+
     Page = require('../../../app/components/page');
-    React.render(<Page/>, root);
+
+    var Cursor = require('pui-cursor');
+    var $application = new Cursor({page: 'record'});
+
+    React.render(<Page {...{$application}}/>, root);
 
   });
 
@@ -15,6 +20,6 @@ describe('page', function(){
   });
 
   it('has the page class', function(){
-    expect('.blah').toExist();
+    expect('.page').toExist();
   });
 });

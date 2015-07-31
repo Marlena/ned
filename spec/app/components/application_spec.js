@@ -22,6 +22,9 @@ describe('Application', function() {
     expect(Page.prototype.render).toHaveBeenCalled();
   });
 
+  it ('initially renders a record component', function(){
+    expect('.record-button').toExist();
+  });
 
 
 

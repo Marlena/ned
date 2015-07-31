@@ -1,13 +1,21 @@
 var React = require('react/addons');
-
 var Record = require('./record');
+
+var types = React.PropTypes;
 
 var Page = React.createClass({
 
-  render(){
-    return (<div className="blah"><Record/></div>);
-  }
+  propTypes: {
+    $application: types.object.isRequired
+  },
 
+  render(){
+    var {$application} = this.props;
+    var page = $application.get('page');
+    return (<div className="page">
+      {page === 'record' && <Record/>}
+    </div>);
+  }
 
 });
 
