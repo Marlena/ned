@@ -1,4 +1,3 @@
-
 .record-button {
   width: 60px;
   height: 60px;
@@ -7,8 +6,8 @@
   border: 5px solid #ddd;
   border-radius: 60px;
   transition: background-color 200ms ease-in;
-  outline: none;
-  &.recording {
-    background-color: #000;
-  }
-}
+  outline: none; }
+  .record-button.recording {
+    background-color: #000; }
+
+/*# sourceMappingURL=application.css.map */

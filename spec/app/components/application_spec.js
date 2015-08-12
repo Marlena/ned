@@ -23,7 +23,7 @@ describe('Application', function() {
   });
 
   it ('initially renders a record component', function(){
-    expect('.record-button').toExist();
+    expect('.record-page').toExist();
   });
 
 
