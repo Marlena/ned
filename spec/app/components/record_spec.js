@@ -1,12 +1,15 @@
 require('../spec_helper');
 
-describe('the record component', function(){
+describe('Given a record component,', function(){
   var Record;
+  var Writing;
 
   beforeEach(function(){
     Record = require('../../../app/components/record');
-
-    React.render(<Record/>, root);
+    Writing = require('../../../app/components/writing');
+    var Cursor = require('pui-cursor');
+    var $recording = new Cursor(false, jasmine.createSpy('recording'));
+    React.render(<Record {...{$recording}}/>, root);
   });
 
   afterEach(function(){
@@ -24,14 +27,4 @@ describe('the record component', function(){
   it('does not render the recording class', function(){
     expect('.record-button').not.toHaveClass('recording');
   });
-
-  describe('user clicks the button', function(){
-    it('adds the recording class to the button', function(){
-      $('.record-button').simulate('click');
-      expect('.record-button').toHaveClass('recording');
-    });
-    
-  })
-
-
 });

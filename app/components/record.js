@@ -1,19 +1,23 @@
 var React = require('react/addons');
+var types = React.PropTypes;
+
 
 var Record = React.createClass({
 
-  getInitialState(){
-    return {recording: false}
+  propTypes: {
+    $recording: types.object.isRequired
   },
 
-  recording(){
-    this.setState({recording: !this.state.recording});
+  recording() {
+    var {$recording} = this.props;
+    $recording.set(!$recording.get());
   },
 
   render(){
+    var {$recording} = this.props;
     var className = 'record-button';
 
-    if(this.state.recording){
+    if($recording.get()){
       className += ' recording';
     }
     return(<div className="record-page">

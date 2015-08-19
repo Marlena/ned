@@ -1,5 +1,6 @@
 var React = require('react/addons');
 var Record = require('./record');
+var Writing = require('./writing');
 
 var types = React.PropTypes;
 
@@ -11,10 +12,13 @@ var Page = React.createClass({
 
   render(){
     var {$application} = this.props;
-    var page = $application.get('page');
-    return (<div className="page">
-      {page === 'record' && <Record/>}
-    </div>);
+    var {page, recording} = $application.get();
+
+    return (
+        <div className="page">
+          {page === 'record' && <Record {...{$recording: $application.refine('recording')}}/>}
+          <Writing {...{recording, $text: $application.refine('text')}}/>
+        </div>);
   }
 
 });

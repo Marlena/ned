@@ -13,7 +13,11 @@ var Application = React.createClass({
   },
 
   getInitialState(){
-    return {page: 'record'}
+    return {
+      recording: false,
+      page: 'record',
+      text: ''
+    }
   },
 
   render() {
