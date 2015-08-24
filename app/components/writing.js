@@ -16,7 +16,7 @@ var Writing = React.createClass({
     return(
         <div className="writing">
     <form>
-      <input className="writing-input" type='text'></input>
+      <textarea className="writing-area"></textarea>
       </form>
     </div>);
   }

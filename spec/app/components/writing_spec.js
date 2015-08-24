@@ -4,6 +4,7 @@ describe('The writing component', function(){
   var Writing;
   const recording = true;
   var subject;
+
   beforeEach(function(){
     Writing = require('../../../app/components/writing');
     var Cursor = require('pui-cursor');
@@ -20,15 +21,14 @@ describe('The writing component', function(){
     expect('.writing').toExist();
   });
 
-  it('renders the writing input.', function(){
-    expect('.writing-input').toExist();
+  it ('renders a text area with the class writing-area', function(){
+    expect('.writing-area').toExist();
   });
 
   describe('when recording is false', function(){
-    it('does not render', function(){
-
+    it ('does not render', function(){
       subject.setProps({recording:false});
       expect('.writing').not.toExist();
     });
-  })
+  });
 });
