@@ -1,5 +1,6 @@
 var React = require('react/addons');
 var types = React.PropTypes;
+var ShowText = require('./show_text');
 
 
 var Writing = React.createClass({
@@ -11,14 +12,18 @@ var Writing = React.createClass({
 
   render(){
     if (!this.props.recording){
-      return null;
+      return(<div className="writing">
+        <ShowText/>
+      </div>);
     }
     return(
-        <div className="writing">
-    <form>
-      <textarea className="writing-area"></textarea>
-      </form>
-    </div>);
+    //{page === 'compare' && <Compare {...{$application}}/>}
+
+    <div className="writing">
+          <form>
+            <textarea className="write-text"></textarea>
+          </form>
+        </div>);
   }
 
 });

@@ -1,14 +1,15 @@
 require ('../spec_helper');
 
 describe('The writing component', function(){
-  var Writing;
+  var Writing, ShowText;
   const recording = true;
   var subject;
 
   beforeEach(function(){
     Writing = require('../../../app/components/writing');
+    ShowText = require('../../../app/components/show_text');
     var Cursor = require('pui-cursor');
-    var $text = new Cursor(null, jasmine.createSpy('text'))
+    var $text = new Cursor(null, jasmine.createSpy('text'));
 
     subject = React.render(<Writing {...{recording, $text}}/>, root);
   });
@@ -21,14 +22,22 @@ describe('The writing component', function(){
     expect('.writing').toExist();
   });
 
-  it ('renders a text area with the class writing-area', function(){
-    expect('.writing-area').toExist();
+  it ('renders a text area', function(){
+    expect('.write-text').toExist();
   });
 
   describe('when recording is false', function(){
-    it ('does not render', function(){
-      subject.setProps({recording:false});
-      expect('.writing').not.toExist();
+
+    beforeEach(function(){
+      subject.setProps({recording: false});
+    });
+
+    it ('renders', function(){
+      expect('.writing').toExist();
+    });
+
+    it ('renders ShowText', function(){
+      expect('.show-text').toExist();
     });
   });
 });

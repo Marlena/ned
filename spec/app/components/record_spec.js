@@ -27,4 +27,8 @@ describe('Given a record component,', function(){
   it('does not render the recording class', function(){
     expect('.record-button').not.toHaveClass('recording');
   });
+
+  it('does not render a WriteText component', function(){
+    expect('.write-text').not.toExist();
+  });
 });
