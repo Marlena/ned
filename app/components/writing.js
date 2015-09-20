@@ -12,20 +12,15 @@ var Writing = React.createClass({
   },
 
   render(){
-    if (!this.props.recording){
-
-      return(
-          <div className="writing">
-            <ShowText/>
-          </div>);
-    }
-    return(
-
-    <div className="writing">
-      <WriteText/>
-    </div>);
+    var {recording, $text} = this.props;
+    var text = $text.get();
+    return (
+        <div className="writing">
+          {(!recording) && <ShowText {...{text}} />}
+          {recording && <WriteText {...{$text}}/>}
+        </div>
+    );
   }
-
 });
 
 module.exports = Writing;

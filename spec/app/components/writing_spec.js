@@ -1,6 +1,7 @@
 require ('../spec_helper');
 
 describe('The writing component', function(){
+  const text = 'this is some text';
   var Writing, ShowText;
   const recording = true;
   var subject;
@@ -9,7 +10,7 @@ describe('The writing component', function(){
     Writing = require('../../../app/components/writing');
     ShowText = require('../../../app/components/show_text');
     var Cursor = require('pui-cursor');
-    var $text = new Cursor(null, jasmine.createSpy('text'));
+    var $text = new Cursor(text, jasmine.createSpy('text'));
 
     subject = React.render(<Writing {...{recording, $text}}/>, root);
   });
@@ -38,6 +39,7 @@ describe('The writing component', function(){
 
     it ('renders ShowText', function(){
       expect('.show-text').toExist();
+      expect('.show-text').toContainText(text);
     });
   });
 });

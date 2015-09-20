@@ -2,9 +2,13 @@ var React = require('react/addons');
 var types = React.PropTypes;
 
 var ShowText = React.createClass({
+  propTypes: {
+    text: types.string.isRequired
+  },
 
   render(){
-    return (<p className="show-text">hai</p>);
+    var text = this.props.text;
+    return (<p className="show-text">{text}</p>);
   }
 
 });
