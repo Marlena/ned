@@ -16,7 +16,7 @@ var Writing = React.createClass({
     var text = $text.get();
     return (
         <div className="writing">
-          {(!recording) && <ShowText {...{text}} />}
+          {(!recording) && <ShowText {...{text}}/>}
           {recording && <WriteText {...{$text}}/>}
         </div>
     );
