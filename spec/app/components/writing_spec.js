@@ -27,6 +27,9 @@ describe('The writing component', function(){
     expect('.write-text').toExist();
   });
 
+  
+
+
   describe('when recording is false', function(){
 
     beforeEach(function(){
