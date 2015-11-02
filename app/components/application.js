@@ -17,12 +17,12 @@ var Application = React.createClass({
       recording: false,
       page: 'record',
       text: ''
-    }
+    };
   },
 
-  render() {
+  render(){
     var $application = new Cursor(this.state, state => this.setState(state));
-    return (<div><Page {...{$application}}/></div>);
+    return (<Page {...{$application}}/>);
   }
 });
 

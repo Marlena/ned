@@ -6,7 +6,7 @@ var WriteText = require('./write_text');
 
 var Writing = React.createClass({
 
-  propTypes:{
+  propTypes: {
     recording: types.bool.isRequired,
     $text: types.object.isRequired
   },

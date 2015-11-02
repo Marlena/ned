@@ -1,8 +1,9 @@
-require ('../spec_helper');
+require('../spec_helper');
 
 describe('The write text component', function(){
 
-  var WriteText, subject, textCallbackSpy;
+  var textCallbackSpy,
+      WriteText;
 
   beforeEach(function(){
     WriteText = require('../../../app/components/write_text');
@@ -10,7 +11,6 @@ describe('The write text component', function(){
     textCallbackSpy = jasmine.createSpy('text');
     const $text = new Cursor('', textCallbackSpy);
     React.render(<WriteText {...{$text}}/>, root);
-
   });
 
   afterEach(function(){
@@ -22,8 +22,9 @@ describe('The write text component', function(){
   });
 
   describe('when the text area is changed', function() {
-    const text = 'some new text';
-    beforeEach(function() {
+    const text = 'You can do this.';
+
+    beforeEach(function(){
       $('.write-text').simulate('change', {target: {value: text}});
     });
 
@@ -31,4 +32,5 @@ describe('The write text component', function(){
       expect(textCallbackSpy).toHaveBeenCalledWith(text);
     });
   });
+
 });

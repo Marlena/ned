@@ -10,7 +10,6 @@ describe('page', function(){
 
     Cursor = require('pui-cursor');
     var $application = new Cursor({page: 'record', recording: false, text: ''}, jasmine.createSpy('application'));
-
     subject = React.render(<Page {...{$application}}/>, root);
 
   });
@@ -36,5 +35,5 @@ describe('page', function(){
     it('renders a writing component.', function(){
       expect('.writing').toExist();
     });
-  })
+  });
 });

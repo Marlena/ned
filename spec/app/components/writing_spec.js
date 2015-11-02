@@ -1,7 +1,7 @@
-require ('../spec_helper');
+require('../spec_helper');
 
 describe('The writing component', function(){
-  const text = 'this is some text';
+  const text = 'Love is the first seed of the soul.';
   var Writing, ShowText;
   const recording = true;
   var subject;
@@ -23,12 +23,9 @@ describe('The writing component', function(){
     expect('.writing').toExist();
   });
 
-  it ('renders a text area', function(){
+  it('renders a text area', function(){
     expect('.write-text').toExist();
   });
-
-  
-
 
   describe('when recording is false', function(){
 
@@ -36,11 +33,11 @@ describe('The writing component', function(){
       subject.setProps({recording: false});
     });
 
-    it ('renders', function(){
+    it('renders', function(){
       expect('.writing').toExist();
     });
 
-    it ('renders ShowText', function(){
+    it('renders ShowText', function(){
       expect('.show-text').toExist();
       expect('.show-text').toContainText(text);
     });
