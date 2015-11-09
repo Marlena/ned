@@ -2,7 +2,6 @@ require('../spec_helper');
 
 describe('Application', function() {
   const baseApiUrl = 'http://example.com';
-  const drugNames = ['morphine', 'water', 'coffee'];
   var Application, Page, KeyCapture;
 
   beforeEach(function() {
@@ -12,7 +11,7 @@ describe('Application', function() {
     spyOn(KeyCapture.prototype, 'render').and.callThrough();
     spyOn(Page.prototype, 'render').and.callThrough();
     spyOn(Application.prototype, 'render').and.callThrough();
-    React.render(<Application {...{config: {baseApiUrl}, data: {drugNames}}}/>, root);
+    React.render(<Application {...{config: {baseApiUrl}}}/>, root);
   });
 
   afterEach(function() {

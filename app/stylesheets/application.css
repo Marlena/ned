@@ -10,6 +10,18 @@
   .record-button.recording {
     background-color: #000; }
 
+.page {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center; }
+
+.ned-header {
+  margin-top: 100px;
+  margin-bottom: 100px; }
+
+.writing {
+  margin-top: 50px; }
+
 /*
 	HTML5 Reset :: style.css
 	----------------------------------------------------------
@@ -213,13 +225,8 @@ input[type=button] {
 .clearfix {
   zoom: 1; }
 
-.page {
-  width: 1000px;
-  margin: 0 auto;
-  text-align: center; }
-
-.ned-header {
-  margin-top: 100px;
-  margin-bottom: 100px; }
+body {
+  font-family: avenir;
+  background: grey; }
 
 /*# sourceMappingURL=application.css.map */

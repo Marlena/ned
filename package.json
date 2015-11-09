@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": "0.10.22",
   "scripts": {
     "test": "./node_modules/.bin/gulp spec",
     "start": "node index.js"
