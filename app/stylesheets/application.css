@@ -10,6 +10,9 @@
   .record-button.recording {
     background-color: #000; }
 
+.body-style {
+  background: skyblue; }
+
 .page {
   width: 1000px;
   margin: 0 auto;
@@ -225,8 +228,7 @@ input[type=button] {
 .clearfix {
   zoom: 1; }
 
-body {
-  font-family: avenir;
-  background: grey; }
+.body-style {
+  font-family: avenir; }
 
 /*# sourceMappingURL=application.css.map */

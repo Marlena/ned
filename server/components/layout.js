@@ -55,7 +55,7 @@ var Layout = React.createClass({
     return (
       <html>
         <head>{stylesheets}</head>
-        <Body {...this.props}/>
+        <Body className="body-style" {...this.props}/>
       </html>
     );
   }
