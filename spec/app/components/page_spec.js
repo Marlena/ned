@@ -2,13 +2,15 @@ require('../spec_helper');
 
 describe('page', function(){
 
-  var Cursor, Page, subject;
+  var Cursor,
+      Page,
+      subject;
 
   beforeEach(function(){
 
+    Cursor = require('pui-cursor');
     Page = require('../../../app/components/page');
 
-    Cursor = require('pui-cursor');
     var $application = new Cursor({page: 'record', recording: false, text: ''}, jasmine.createSpy('application'));
     subject = React.render(<Page {...{$application}}/>, root);
 

@@ -18,10 +18,6 @@ var Page = React.createClass({
 
     return (
         <div className="page">
-          <header className="ned-header">
-            <h1>N.E.D.</h1>
-            <div>Ned is not an editor</div>
-          </header>
 
           {page === 'record' && <Record {...{$recording, $text}}/>}
           <Writing {...{recording, $text}}/>

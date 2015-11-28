@@ -17,9 +17,10 @@
   margin: 0 auto;
   text-align: center; }
 
-.ned-header {
+.app-header {
   margin-top: 100px;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  text-align: center; }
 
 .writing {
   margin-top: 50px; }

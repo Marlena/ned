@@ -2,6 +2,7 @@ require('babel/polyfill');
 var Cursor = require('pui-cursor');
 var Layout = require('../../server/components/layout');
 var Page = require('./page');
+var AppHeader = require('./app_header');
 var React = require('react/addons');
 
 var types = React.PropTypes;
@@ -22,7 +23,12 @@ var Application = React.createClass({
 
   render(){
     var $application = new Cursor(this.state, state => this.setState(state));
-    return (<Page {...{$application}}/>);
+    return (
+        <div>
+          <AppHeader/>
+          <Page {...{$application}}/>
+        </div>
+    );
   }
 });
 
