@@ -21,10 +21,6 @@ describe('The write text component', function(){
     expect('.write-text').toExist();
   });
 
-  it('has autofocus', function(){
-
-  });
-
   describe('when the text area is changed', function() {
     const text = 'You can do this.';
 

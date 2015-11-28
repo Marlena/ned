@@ -14,6 +14,7 @@ var Page = React.createClass({
     var {$application} = this.props;
     var {page, recording} = $application.get();
     var $text = $application.refine('text');
+    var $recording = $application.refine('recording');
 
     return (
         <div className="page">
@@ -22,13 +23,11 @@ var Page = React.createClass({
             <div>Ned is not an editor</div>
           </header>
 
-          {page === 'record' && <Record {...{$recording: $application.refine('recording'), $text}}/>}
+          {page === 'record' && <Record {...{$recording, $text}}/>}
           <Writing {...{recording, $text}}/>
-          <KeyCapture {...{$text}}/>
         </div>);
   }
 
 });
-
 
 module.exports = Page;

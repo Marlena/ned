@@ -18,5 +18,4 @@ var WriteText = React.createClass({
 
 });
 
-
 module.exports = WriteText;

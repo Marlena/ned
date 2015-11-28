@@ -7,8 +7,6 @@ describe('Application', function() {
   beforeEach(function() {
     Application = require('../../../app/components/application');
     Page = require('../../../app/components/page');
-    KeyCapture = require('../../../app/components/key_capture');
-    spyOn(KeyCapture.prototype, 'render').and.callThrough();
     spyOn(Page.prototype, 'render').and.callThrough();
     spyOn(Application.prototype, 'render').and.callThrough();
     React.render(<Application {...{config: {baseApiUrl}}}/>, root);
@@ -24,10 +22,6 @@ describe('Application', function() {
 
   it('initially renders a record component', function(){
     expect('.record-page').toExist();
-  });
-
-  it('renders a key capture', function() {
-    expect(KeyCapture.prototype.render).toHaveBeenCalled();
   });
 
 });

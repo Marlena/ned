@@ -34,6 +34,7 @@ require('../spec_helper');
   });
 
     describe('when recording is false and record is clicked,', function(){
+      var recordingSpy;
       var $text;
       var textCallbackSpy;
 
@@ -41,6 +42,7 @@ require('../spec_helper');
         Cursor = require('pui-cursor');
         Record = require('../../../app/components/record');
         $recording = new Cursor(false, jasmine.createSpy('recording'));
+        recordingSpy = jasmine.createSpy('recording');
         textCallbackSpy = jasmine.createSpy('text');
         $text = new Cursor('You can do this.', textCallbackSpy);
 
