@@ -1,16 +1,16 @@
 require ('../spec_helper');
 
 describe('The App Header component', function(){
-  var AppHeader, subject;
+  var Header, subject;
 
   beforeEach(function(){
 
-    AppHeader = require('../../../app/components/app_header');
-    subject = React.render(<AppHeader/>, root);
+    Header = require('../../../app/components/header');
+    subject = React.render(<Header/>, root);
 
   });
 
   it('renders a header', function(){
-    expect('.app-header').toExist();
+    expect('.header').toExist();
   });
 });

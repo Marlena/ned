@@ -2,7 +2,7 @@ require('babel/polyfill');
 var Cursor = require('pui-cursor');
 var Layout = require('../../server/components/layout');
 var Page = require('./page');
-var AppHeader = require('./app_header');
+var AppHeader = require('./header');
 var React = require('react/addons');
 
 var types = React.PropTypes;

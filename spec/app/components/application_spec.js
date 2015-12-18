@@ -3,17 +3,17 @@ require('../spec_helper');
 describe('Application', function() {
   const baseApiUrl = 'http://example.com';
   var Application,
-      AppHeader,
+      Header,
       Page;
 
   beforeEach(function() {
     Application = require('../../../app/components/application');
     Page = require('../../../app/components/page');
-    AppHeader = require('../../../app/components/app_header');
+    Header = require('../../../app/components/header');
 
     spyOn(Page.prototype, 'render').and.callThrough();
     spyOn(Application.prototype, 'render').and.callThrough();
-    spyOn(AppHeader.prototype, 'render').and.callThrough();
+    spyOn(Header.prototype, 'render').and.callThrough();
 
     React.render(<Application {...{config: {baseApiUrl}}}/>, root);
   });
@@ -31,8 +31,8 @@ describe('Application', function() {
   });
 
   it('renders a header', function(){
-    expect('.app-header').toExist();
-    expect(AppHeader.prototype.render).toHaveBeenCalled();
+    expect('.header').toExist();
+    expect(Header.prototype.render).toHaveBeenCalled();
   });
 
 });

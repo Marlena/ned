@@ -1,15 +1,19 @@
 require('../spec_helper');
 
-describe('page', function(){
+describe('The page component', function(){
 
-  var Cursor,
-      Page,
-      subject;
+  var Cursor;
+  var Ned;
+  var Page;
+  var subject;
 
   beforeEach(function(){
 
     Cursor = require('pui-cursor');
+    Ned = require('../../../app/components/ned');
     Page = require('../../../app/components/page');
+
+    spyOn(Ned.prototype, 'render').and.callThrough();
 
     var $application = new Cursor({page: 'record', recording: false, text: ''}, jasmine.createSpy('application'));
     subject = React.render(<Page {...{$application}}/>, root);
@@ -24,18 +28,9 @@ describe('page', function(){
     expect('.page').toExist();
   });
 
-  describe('when recording is true', function(){
-    beforeEach(function() {
-      var $application = new Cursor({page: 'record', recording: true, text: ''}, jasmine.createSpy('application'));
-      subject.setProps({$application});
-    });
-
-    it('adds the recording class to the button', function(){
-      expect('.record-button').toHaveClass('recording');
-    });
-
-    it('renders a writing component.', function(){
-      expect('.writing').toExist();
-    });
+  it('renders a ned component', function(){
+    expect(Ned.prototype.render).toHaveBeenCalled();
   });
+
+
 });

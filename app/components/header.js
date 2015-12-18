@@ -1,10 +1,10 @@
 var React = require('react/addons');
 
-var AppHeader = React.createClass({
+var Header = React.createClass({
 
   render(){
     return(
-      <header className="app-header">
+      <header className="header">
         N.E.D.
         <div>Ned is not an editor.</div>
       </header>
@@ -12,4 +12,4 @@ var AppHeader = React.createClass({
   }
 });
 
-module.exports = AppHeader;
+module.exports = Header;

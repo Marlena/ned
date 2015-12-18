@@ -1,3 +1,4 @@
+var Ned = require('./ned');
 var React = require('react/addons');
 var Record = require('./record');
 var Writing = require('./writing');
@@ -18,12 +19,13 @@ var Page = React.createClass({
 
     return (
         <div className="page">
-
-          {page === 'record' && <Record {...{$recording, $text}}/>}
-          <Writing {...{recording, $text}}/>
+          <Ned {...{$application}}/>
         </div>);
   }
 
 });
 
 module.exports = Page;
+
+//To get the right page, was previously doing this:
+//{page === 'record' && <Record {...{$recording, $text}}/>}
