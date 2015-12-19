@@ -15,7 +15,7 @@ describe('The page component', function(){
 
     spyOn(Ned.prototype, 'render').and.callThrough();
 
-    var $application = new Cursor({page: 'record', recording: false, text: ''}, jasmine.createSpy('application'));
+    var $application = new Cursor({page: 'ned', recording: false, text: ''}, jasmine.createSpy('application'));
     subject = React.render(<Page {...{$application}}/>, root);
 
   });

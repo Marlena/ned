@@ -13,19 +13,14 @@ var Page = React.createClass({
 
   render(){
     var {$application} = this.props;
-    var {page, recording} = $application.get();
-    var $text = $application.refine('text');
-    var $recording = $application.refine('recording');
+    var {page} = $application.get();
 
     return (
         <div className="page">
-          <Ned {...{$application}}/>
+          {page === 'ned' && <Ned {...{$application}}/>}
         </div>);
   }
 
 });
 
 module.exports = Page;
-
-//To get the right page, was previously doing this:
-//{page === 'record' && <Record {...{$recording, $text}}/>}

@@ -26,10 +26,6 @@ describe('Application', function() {
     expect(Page.prototype.render).toHaveBeenCalled();
   });
 
-  it('initially renders a record component', function(){
-    expect('.record-page').toExist();
-  });
-
   it('renders a header', function(){
     expect('.header').toExist();
     expect(Header.prototype.render).toHaveBeenCalled();

@@ -16,7 +16,7 @@ var Application = React.createClass({
   getInitialState(){
     return {
       recording: false,
-      page: 'record',
+      page: 'ned',
       text: ''
     };
   },
