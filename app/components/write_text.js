@@ -13,7 +13,7 @@ var WriteText = React.createClass({
 
   render(){
     const text = this.props.$text.get();
-    return (<textarea className="write-text" onChange={this.change} value={text} />);
+    return (<textarea className="write-text" onChange={this.change} value={text} autofocus/>);
   }
 
 });

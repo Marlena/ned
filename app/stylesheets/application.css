@@ -17,7 +17,7 @@
   margin: 0 auto;
   text-align: center; }
 
-.app-header {
+.header {
   margin-top: 100px;
   margin-bottom: 100px;
   text-align: center; }
@@ -230,5 +230,11 @@ input[type=button] {
 
 .body-style {
   font-family: avenir; }
+
+.write-text {
+  width: 10px;
+  height: 13px;
+  background: skyblue;
+  resize: none; }
 
 /*# sourceMappingURL=application.css.map */
