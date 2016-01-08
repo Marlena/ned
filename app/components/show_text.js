@@ -8,7 +8,9 @@ var ShowText = React.createClass({
 
   render(){
     var text = this.props.text;
-    return (<p className="show-text">{text}</p>);
+    return (
+        <p className="show-text">{text}</p>
+    );
   }
 
 });

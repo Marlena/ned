@@ -1,6 +1,10 @@
 .write-text{
-  width: 10px;
-  height: 13px;
-  background: skyblue;
+  width: 20px;
+  height: 20px;
+  background: black;
   resize: none;
+  border: 1px solid #000000;
+  border-radius: 100%;
+  color: #ffffff;
+  overflow: hidden;
 }
